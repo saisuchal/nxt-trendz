@@ -69,3 +69,15 @@
     display: none;
   }
 }
+
+.payment {
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 5px;
+  padding: 2vw;
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+}

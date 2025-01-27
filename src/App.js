@@ -15,6 +15,8 @@ import './App.css'
 class App extends Component {
   state = {
     cartList: [],
+    codCheck: false,
+    orderSuccess: false,
   }
 
   removeAllCartItems = () => {
@@ -85,8 +87,16 @@ class App extends Component {
     }
   }
 
+  setCod = () => {
+    this.setState({codCheck: true})
+  }
+
+  confirmOrder = () => {
+    this.setState({orderSuccess: true})
+  }
+
   render() {
-    const {cartList} = this.state
+    const {cartList, codCheck, orderSuccess} = this.state
 
     return (
       <CartContext.Provider
@@ -97,6 +107,10 @@ class App extends Component {
           incrementCartItemQuantity: this.incrementCartItemQuantity,
           decrementCartItemQuantity: this.decrementCartItemQuantity,
           removeAllCartItems: this.removeAllCartItems,
+          codCheck,
+          orderSuccess,
+          setCod: this.setCod,
+          confirmOrder: this.confirmOrder,
         }}
       >
         <Switch>
