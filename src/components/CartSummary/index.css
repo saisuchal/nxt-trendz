@@ -10,24 +10,34 @@
   font-size: 16px;
   margin-bottom: 2px;
 }
-
-@media screen and (min-width: 768px) {
-  .order-total-value {
-    font-size: 32px;
-  }
-}
-
 .order-total-label {
   color: #616e7c;
   font-family: 'Roboto';
   font-size: 16px;
   font-weight: 500;
 }
+.confirm-order-button {
+  margin-top: 20px;
+}
+.confirm-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-@media screen and (min-width: 768px) {
-  .order-total-label {
-    font-size: 24px;
-  }
+.payment {
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0px 0px 5px;
+  min-width: 25vw;
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
 }
 
 .total-items {
@@ -35,12 +45,6 @@
   font-family: 'Roboto';
   font-size: 12px;
   margin-top: 2px;
-}
-
-@media screen and (min-width: 768px) {
-  .total-items {
-    font-size: 16px;
-  }
 }
 
 .checkout-button {
@@ -58,6 +62,12 @@
   cursor: pointer;
 }
 
+.order-success-message {
+  color: green;
+  text-align: center;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 767px) {
   .d-sm-none {
     display: none;
@@ -65,20 +75,13 @@
 }
 
 @media screen and (min-width: 768px) {
+  .order-total-value {
+    font-size: 24px;
+  }
+  .total-items {
+    font-size: 16px;
+  }
   .d-lg-none {
     display: none;
   }
-}
-
-.payment {
-  background-color: white;
-  border: 1px solid grey;
-  border-radius: 5px;
-  padding: 20px;
-  box-shadow: 0px 0px 5px;
-}
-
-.payment-options {
-  display: flex;
-  flex-direction: column;
 }
